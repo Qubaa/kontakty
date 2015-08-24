@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firma:</strong>
+  <%= @kontum.firma %>
+</p>
+
+<p>
+  <strong>Osoba:</strong>
+  <%= @kontum.osoba %>
+</p>
+
+<p>
+  <strong>Telefon:</strong>
+  <%= @kontum.telefon %>
+</p>
+
+<p>
+  <strong>Telefon2:</strong>
+  <%= @kontum.telefon2 %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @kontum.mail %>
+</p>
+
+<%= link_to 'Edit', edit_kontum_path(@kontum) %> |
+<%= link_to 'Back', konta_path %>

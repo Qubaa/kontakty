@@ -1,0 +1,37 @@
+<%= form_for(@kontum) do |f| %>
+  <% if @kontum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kontum.errors.count, "error") %> prohibited this kontum from being saved:</h2>
+
+      <ul>
+      <% @kontum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :firma %><br>
+    <%= f.text_field :firma %>
+  </div>
+  <div class="field">
+    <%= f.label :osoba %><br>
+    <%= f.text_field :osoba %>
+  </div>
+  <div class="field">
+    <%= f.label :telefon %><br>
+    <%= f.number_field :telefon %>
+  </div>
+    <div class="field">
+    <%= f.label :telefon2 %><br>
+    <%= f.number_field :telefon2 %>
+  </div>
+  <div class="field">
+    <%= f.label :mail %><br>
+    <%= f.text_field :mail %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

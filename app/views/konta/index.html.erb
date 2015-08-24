@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Konta</h1>
+
+<table border="2">
+  <thead>
+    <tr>
+      <th>Firma</th>
+      <th>Osoba</th>
+      <th>Telefon</th>
+      <th>Telefon2</th>
+      <th>Mail</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @konta.each do |kontum| %>
+      <tr>
+        <td><%= kontum.firma %></td>
+        <td><%= kontum.osoba %></td>
+        <td><%= kontum.telefon %></td> 
+        <td><%= kontum.telefon2 %></td>
+        <td><%= kontum.mail %></td>
+        <td><%= link_to 'Show', kontum %></td>
+        <td><%= link_to 'Edit', edit_kontum_path(kontum) %></td>
+        <td><%= link_to 'Destroy', kontum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kontum', new_kontum_path %>
